@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gallery</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-red.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="apple-touch-icon" sizes="180x180" href="http://per-concept.com/Kindness/images/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="http://per-concept.com/Kindness/images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="http://per-concept.com/Kindness/images/favicon/favicon-16x16.png">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<style>
+		img.heart {
+		  float: inherit;
+		}
+		</style>
+		
+		<style>
+		body {
+		  font-family: Verdana, sans-serif;
+		  margin: 0;
+		}
+
+		* {
+		  box-sizing: border-box;
+		}
+
+		.row > .column {
+		  padding: 0 8px;
+		}
+
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
+		.column {
+		  float: left;
+		  width: 25%;
+		}
+		</style>
+		
+<!--		/* The Modal (background) */ -->
+		<style>
+		.modal {
+		  display: none;
+		  position: fixed;
+		  z-index: 1;
+		  padding-top: 40px;
+		  padding-left: 20px;
+		  left: 0;
+		  top: 0;
+		  width: 100%;
+		  height: 100%;
+		  overflow: auto;
+		  background-color: black;
+		  color: white;
+		}
+
+		/* Modal Content */
+		.modal-content {
+		  position: absolute;
+		  background-color: black;
+		  color: white;
+		  margin: auto;
+		  padding: 10px;
+		  width: 90%;
+		  max-width: 100%;
+		}
+
+		/* The Close Button */
+		.close {
+		  color: white;
+		  position: absolute;
+		  top: 10px;
+		  right: 25px;
+		  font-size: 35px;
+		  font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+		  color: #999;
+		  text-decoration: none;
+		  cursor: pointer;
+		}
+
+		.mySlides {
+		  display: none;
+		}
+
+		.cursor {
+		  cursor: pointer
+		}
+		</style>
+		
+<!--		/* Images */ -->
+		<style>
+		div.shadow {
+			box-shadow: 10px 10px 5px #888888;
+			}
+		
+		img {
+		  max-width: 100%;
+		  height: auto;
+		  margin-bottom: 2px;
+		  border-radius: 16px;
+		}
+		
+		img.centered {
+		  display: block;
+		  margin: auto;
+		 }
+		
+		img.thumb {
+		  max-width: 100%;
+		  border: 2px solid white;
+		  border-radius: 4px;
+		  padding: 5px;
+		  width: 150px;
+		}
+
+		img.hover-shadow {
+		  transition: 0.3s
+		}
+
+		.caption-container {
+		  text-align: center;
+		  background-color: black;
+		  padding: 2px 16px;
+		  color: white;
+		}
+
+		.demo {
+		  opacity: 0.6;
+		}
+
+		.active,
+		.demo:hover {
+		  opacity: 1;
+		}
+
+		.hover-shadow:hover {
+		  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+		}
+		</style>
+		
+		<style>
+		div.bgblack {
+			display: block;
+			background-color: black;
+			color:white;
+			padding:5px;
+			}
+		
+		div.bgred {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: red;
+			color:white;
+			padding:5px;
+			}
+			
+		div.bggold {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: gold;
+			color:white;
+			padding:20px;
+			}
+			
+		div.bggreen {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: green;
+			color:white;
+			padding:20px;
+			}
+		</style>
+		
+		<style>
+		.rows3 {
+			-webkit-column-count: 3; /* Chrome, Safari, Opera */
+			-moz-column-count: 3; /* Firefox */
+			column-count: 3;
+
+			-webkit-column-gap: 3px; /* Chrome, Safari, Opera */
+			-moz-column-gap: 3px; /* Firefox */
+			column-gap: 3px;
+		}
+		</style>		
+	</head>
+	
+	<body>
+<!-- Navbar______________________________________________________________________-->
+		<nav>
+			<div class="w3-top">
+			<div class="w3-bar w3-black w3-card-2">
+				<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+				<a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+				<a href="index.html#donate" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DONATE</a>
+				<a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+				<a href="image_gallery.html" class="w3-bar-item w3-grey w3-button w3-padding-large w3-hide-small">IMAGE GALLERY</a>
+				<a href="video_gallery.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">VIDEO GALLERY</a>
+				<a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT US</a>
+				
+			</div>
+		</div>
+
+<!-- Navbar on small screens -->
+		<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+		 <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+		 <a href="index.html#donate" class="w3-bar-item w3-button w3-padding-large">DONATE</a>
+		 <a href="about.html" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>		  
+		 <a href="image_gallery.html" class="w3-bar-item w3-button w3-padding-large">IMAGE GALLERY</a>
+		 <a href="video_gallery.html" class="w3-bar-item w3-button w3-padding-large">VIDEO GALLERY</a>
+		 <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large">CONTACT US</a>
+		</div>
+		</nav>
+		<br>
+		<br>
+		
+<!-- Page Title______________________________________________________________________-->		
+		<div class="w3-container">
+			  <h1 align="center"><img class="heart" src="img/trudyHeart.jpg" style="width:6%"></img>
+			  <b>TRUDY&#39;S HEART FOUNDATION</b></h1>
+		</div>
+			
+<!-- Red Border______________________________________________________________________-->
+		<div class="w3-bar w3-red">
+			  <p></p>
+		</div>
+		
+<!-- Three-image header______________________________________________________________________-->
+		
+			<div class="rows3 shadow">
+					<div>
+						<img class="normal" src="img/easter_party_for_the_kids.jpg" alt="easter party"></img>
+					</div>
+					<div>
+						<img src="img/happy_kids.jpg" alt="easter party"></img>
+					</div>
+					<div>
+						<img src="img/handing_out_childrens_clothes.JPG" alt="easter party"></img>
+					</div>
+			</div>
+			<br>
+		
+		<h2 class="w3-wide" style="text-align:center"><b>Picture Gallery</b></h2>
+		<h4 class="w3-wide" style="text-align:center">Click on the images to read the captions</h4>
+<!-- PICTURES ROW 1 ______________________________________________________________________-->
+		<div class="bgblack shadow">
+		<div class="bgred">
+		
+		  <div class="row">
+			 <div class="column">
+			  <img src="img/IMG_5983.JPG" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn">
+			  </div>
+			  
+			  <div class="column">
+			  <img src="img/IMG_5985.JPG" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn2">
+			  </div>
+			  
+			  <div class="column">
+			  <img src="img/IMG_5987.JPG" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn3">
+			 </div>
+			 
+			 <div class="column">
+			  <img src="img/IMG_5990.JPG" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn4">
+			 </div>
+		  </div>
+		
+		</div>
+		</div>	
+		
+<!-- MODAL ROW 1______________________________________________________________________-->	
+		<div class="w3-container">
+		  <div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">			
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Children from JIK (Jesus is King) Orphanage at Takoradi, Ghana</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 1-->
+				  <img src="img/IMG_5983.JPG" class="w3-container" style="max-width:100%">At our Easter Party 2017</img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>		  
+		  <div class="modal fade" id="myModal2" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">JIKO Easter Party</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 2-->
+				  <img src="img/IMG_5985.JPG" class="w3-container" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>		  
+		  <div class="modal fade" id="myModal3" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">JIKO Easter Party</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 3-->
+				  <img src="img/IMG_5987.JPG" class="w3-container" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>		  
+		  
+
+		  <div class="modal fade" id="myModal4" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">JIKO Easter Party</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 4-->
+				  <img src="img/IMG_5990.JPG" class="w3-container" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<br>
+		
+<!-- PICTURES ROW 2 _________________________________________________________________________-->
+		<div class="bgblack shadow">
+		<div class="bggold">
+
+		  <div class="row">
+			 <div class="column">
+			  <img src="img/IMG_5997.JPG" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn5">
+			  </div>
+			  
+			  <div class="column">
+			  <img src="img/IMG_5996.JPG" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn6">
+			  </div>
+			  
+			  <div class="column">
+			  <img src="img/children_photo_op2.jpg" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn7">
+			 </div>
+			 
+			 <div class="column">
+			  <img src="img/handing_out_clothes_2.jpg" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn8">
+			 </div>
+		  </div>
+		
+		</div>
+		</div>
+	
+<!-- MODAL ROW 2______________________________________________________________________-->	
+		<div class="w3-container">
+		  <div class="modal fade" id="myModal5" role="dialog">
+			<div class="modal-dialog">			
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Distributing T-shirts to JIKO children</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 5-->
+				  <img src="img/IMG_5997.JPG" class="centered" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="modal fade" id="myModal6" role="dialog">
+			<div class="modal-dialog">			
+		
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">Distributing T-shirts to JIKO children</h4>
+				</div>				
+				<div class="modal-body">
+<!-- Modal pic 6-->
+				  <img src="img/IMG_5996.JPG" class="centered" style="max-width:100%">EFGH</img>
+				</div>				
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="modal fade" id="myModal7" role="dialog">
+			<div class="modal-dialog">			
+
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">Ms. Gertrude and the Orphans from JIKO</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 7-->
+				  <img src="img/children_photo_op2.jpg" class="centered" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="modal fade" id="myModal8" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">Distribution of gifts</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 8-->
+				  <img src="img/handing_out_clothes_2.jpg" class="centered" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<br>
+		
+<!-- PICTURES ROW 3 _________________________________________________________________________-->
+		<div class="bgblack shadow">
+		<div class="bggreen">
+
+		  <div class="row">
+			 <div class="column">
+			  <img src="img/gifts.jpg" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn9">
+			  </div>
+			  
+			  <div class="column">
+			  <img src="img/trying_on_donated_shoes.JPG" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn10">
+			  </div>
+			  
+			  <div class="column">
+			  <img src="img/orphan_trying_on_new_clothes.JPG" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn11">
+			 </div>
+			 
+			 <div class="column">
+			  <img src="img/local_children.JPG" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn12">
+			 </div>
+		  </div>
+		
+		</div>
+		</div>
+	
+<!-- MODAL ROW 3______________________________________________________________________-->	
+		<div class="w3-container">	
+		  <div class="modal fade" id="myModal9" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">JIKO</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 9-->
+				  <img src="img/gifts.jpg" class="centered" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>	
+		  <div class="modal fade" id="myModal10" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">Trying on new footwear</h4>
+				</div>				
+				<div class="modal-body">
+<!-- Modal pic 10-->
+				  <img src="img/trying_on_donated_shoes.JPG" class="centered" style="max-width:100%"></img>
+				</div>
+				
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="modal fade" id="myModal11" role="dialog">
+			<div class="modal-dialog">			
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">Orphan trying on a new shirt</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 11-->
+				<img src="img/orphan_trying_on_new_clothes.JPG" class="centered" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="modal fade" id="myModal12" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">Gertrude and children from Asiama orphanage</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 12-->
+				  <img src="img/local_children.JPG" class="centered" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<br>
+		
+<!-- PICTURES ROW 4 ______________________________________________________________________-->
+		<div class="bgblack shadow">
+		<div class="bgred">
+
+		  <div class="row">
+			 <div class="column">
+			  <img src="img/IMG_0208.JPG" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn13">
+			  </div>
+			  
+			  <div class="column">
+			  <img src="img/IMG_0210.JPG" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn14">
+			  </div>
+			  
+			  <div class="column">
+			  <img src="img/speaking_with_local_youth.jpg" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn15">
+			 </div>
+			 
+			 <div class="column">
+			  <img src="img/seminar_with_local_youth.jpg" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn16">
+			 </div>
+		  </div>
+
+		</div>
+		</div>
+	
+<!-- MODAL ROW 4 ______________________________________________________________________-->	
+		<div class="w3-container">
+		  <div class="modal fade" id="myModal13" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Nkroful Youth Organization</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 13-->
+				<img src="img/IMG_0208.JPG" class="centered" style="max-width:100%">"Nkroful Youth and Fan Club"</img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="modal fade" id="myModal14" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">Nkroful Youth</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 14-->
+				<img src="img/IMG_0210.JPG" class="centered" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="modal fade" id="myModal15" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">Nkroful Youth meeting with the community</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 15-->
+				<img src="img/speaking_with_local_youth.jpg" class="centered" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="modal fade" id="myModal16" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">Ms. Gertrude addresses the Youth and community</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 16-->
+				  <img src="img/seminar_with_local_youth.jpg" class="centered" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<br>
+		
+<!-- PICTURES ROW 5 _________________________________________________________________________-->
+		<div class="bgblack shadow">
+		<div class="bggold">
+
+		  <div class="row">
+			 <div class="column">
+			  <img src="img/lookAtMyNewPhone.jpg" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn17">
+			  </div>
+			  
+			  <div class="column">
+			  <img src="img/child_with_pink_teddy.jpg" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn18">
+			  </div>
+			  
+			  <div class="column">
+			  <img src="img/IMG_0238.JPG" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn19">
+			 </div>
+			 
+			 <div class="column">
+			  <img src="img/nzema_association_youth.jpg" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn20">
+			 </div>
+		  </div>
+
+		</div>
+		</div>
+	
+<!-- MODAL ROW 5_________________________________________________________________________-->	
+		<div class="w3-container">
+		  <div class="modal fade" id="myModal17" role="dialog">
+			<div class="modal-dialog">			
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">A welcomed visit from an old JIKO resident</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 17-->
+				<img src="img/lookAtMyNewPhone.jpg" class="centered" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="modal fade" id="myModal18" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">School supplies for Awiebo Orphanage</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 18-->
+				<img src="img/child_with_pink_teddy.jpg" class="centered" style="max-width:100%">EFGH</img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="modal fade" id="myModal19" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">A moment of prayer with Nkroful Youth</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 19-->
+				<img src="img/IMG_0238.JPG" class="centered" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="modal fade" id="myModal20" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">Nkroful Youth phot opportunity moment/h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 20-->
+				<img src="img/nzema_association_youth.jpg" class="centered" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<br>
+		
+<!-- PICTURES ROW 6 _________________________________________________________________________-->
+		<div class="bgblack shadow">
+		<div class="bggreen">
+
+		  <div class="row">
+			 <div class="column">
+			  <img src="img/another_contributor.jpg" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn21">
+			  </div>
+			  
+			  <div class="column">
+			  <img src="img/yawson_stars_soccer_team.jpg" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn22">
+			  </div>
+			  
+			  <div class="column">
+			  <img src="img/donated_by_aunty_betty.jpg" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn23">
+			 </div>
+			 
+			 <div class="column">
+			  <img src="img/Gertrude_and_Betty.jpg" class="centered thumb hover-shadow cursor" style="max-width:100%" id="myBtn24">
+			 </div>
+		  </div>
+
+		</div>
+		</div>
+	
+<!-- MODAL ROW 6 _________________________________________________________________________-->	
+		<div class="w3-container">
+		  <div class="modal fade" id="myModal21" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Gertrude with a Donor from California</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 21-->
+				  <img src="img/another_contributor.jpg" class="centered" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="modal fade" id="myModal22" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">The Yawson Stars Youth Football Team</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 22-->
+				  <img src="img/yawson_stars_soccer_team.jpg" class="centered" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="modal fade" id="myModal23" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">Latrine funded by Ms. Betty Reinke for Awiebo Orphanage</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 23-->
+				<img src="img/donated_by_aunty_betty.jpg" class="centered" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="modal fade" id="myModal24" role="dialog">
+			<div class="modal-dialog">	
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">×</button>
+				  <h4 class="modal-title">Gertrude and her Sister in Christ, Betty Reinke</h4>
+				</div>
+				<div class="modal-body">
+<!-- Modal pic 24-->
+				  <img src="img/Gertrude_and_Betty.jpg" class="centered" style="max-width:100%"></img>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>		
+<!-- End Page Content -->
+
+<!-- Footer -->
+		<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+		  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+		  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+		  <i class="fa fa-twitter w3-hover-opacity"></i>
+		  <i class="fa fa-linkedin w3-hover-opacity"></i>
+		  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+		</footer>
+		
+		<script>
+		$(document).ready(function(){
+			$("#myBtn").click(function(){
+				$("#myModal").modal({backdrop: false});
+			});
+			$("#myBtn2").click(function(){
+				$("#myModal2").modal({backdrop: false});
+			});
+			$("#myBtn3").click(function(){
+				$("#myModal3").modal({backdrop: false});
+			});
+			$("#myBtn4").click(function(){
+				$("#myModal4").modal({backdrop: false});
+			});
+			$("#myBtn5").click(function(){
+				$("#myModal5").modal({backdrop: false});
+			});
+			$("#myBtn6").click(function(){
+				$("#myModal6").modal({backdrop: false});
+			});
+			$("#myBtn7").click(function(){
+				$("#myModal7").modal({backdrop: false});
+			});
+			$("#myBtn8").click(function(){
+				$("#myModal8").modal({backdrop: false});
+			});
+			$("#myBtn9").click(function(){
+				$("#myModal9").modal({backdrop: false});
+			});
+			$("#myBtn10").click(function(){
+				$("#myModal10").modal({backdrop: false});
+			});
+			$("#myBtn11").click(function(){
+				$("#myModal11").modal({backdrop: false});
+			});
+			$("#myBtn12").click(function(){
+				$("#myModal12").modal({backdrop: false});
+			});
+			$("#myBtn13").click(function(){
+				$("#myModal13").modal({backdrop: false});
+			});
+			$("#myBtn14").click(function(){
+				$("#myModal14").modal({backdrop: false});
+			});
+			$("#myBtn15").click(function(){
+				$("#myModal15").modal({backdrop: false});
+			});
+			$("#myBtn16").click(function(){
+				$("#myModal16").modal({backdrop: false});
+			});
+			$("#myBtn17").click(function(){
+				$("#myModal17").modal({backdrop: false});
+			});
+			$("#myBtn18").click(function(){
+				$("#myModal18").modal({backdrop: false});
+			});
+			$("#myBtn19").click(function(){
+				$("#myModal19").modal({backdrop: false});
+			});
+			$("#myBtn20").click(function(){
+				$("#myModal20").modal({backdrop: false});
+			});
+			$("#myBtn21").click(function(){
+				$("#myModal21").modal({backdrop: false});
+			});
+			$("#myBtn22").click(function(){
+				$("#myModal22").modal({backdrop: false});
+			});
+			$("#myBtn23").click(function(){
+				$("#myModal23").modal({backdrop: false});
+			});
+			$("#myBtn24").click(function(){
+				$("#myModal24").modal({backdrop: false});
+			});
+		});
+
+		// Used to toggle the menu on small screens when clicking on the menu button
+		function myFunction() {
+			var y = document.getElementById("navDemo");
+			if (y.className.indexOf("w3-show") == -1) {
+				y.className += " w3-show";
+			} else { 
+				y.className = y.className.replace(" w3-show", "");
+			}
+		}
+		
+
+		</script>
+	</body>	
+</html>

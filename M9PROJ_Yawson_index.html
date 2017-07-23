@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TRUDY&#39;S HEART FOUNDATION</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-red.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="apple-touch-icon" sizes="180x180" href="http://per-concept.com/Kindness/images/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="http://per-concept.com/Kindness/images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="http://per-concept.com/Kindness/images/favicon/favicon-16x16.png">
+
+		<style type="text/css">
+			body {
+				font-family: "Lato", sans-serif
+			}
+			
+			.mySlides {
+				display: none
+			}
+		</style>
+		
+		<style>
+			img.displayed {
+				display: block;
+				margin-left: auto;
+				margin-right: auto }
+				
+			p.displayed {
+				display: block;
+				margin-left: auto;
+				margin-right: auto }
+		</style>
+		
+		<style>
+			div.bgblack {
+				background-color: black;
+				color:white;
+				padding:20px;
+			}
+		</style>
+		
+		<style>
+			div.gallery {
+				margin: 5px;
+				border: 1px solid #ccc;
+				float: left;
+				width: 180px;
+			}
+
+			div.gallery:hover {
+				border: 1px solid #777;
+			}
+
+			div.gallery img {
+				width: 100%;
+				height: auto;
+			}
+
+			div.desc {
+				padding: 15px;
+				text-align: center;
+			}
+		</style>
+		
+		<style>
+			video {
+				width: 49%;
+				height: auto;
+				padding:30px;
+			}
+		</style>		
+	</head>
+	
+	<body>
+<!-- Navbar -->
+		<nav>
+			<div class="w3-top">
+			<div class="w3-bar w3-black w3-card-2">
+				<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+				<a href="index.html" class="w3-bar-item w3-button w3-grey w3-padding-large">HOME</a>
+				<a href="index.html#donate" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DONATE</a>
+				<a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+				<a href="image_gallery.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">IMAGE GALLERY</a>
+				<a href="video_gallery.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">VIDEO GALLERY</a>
+				<a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT US</a>
+				
+			</div>
+		</div>
+
+<!-- Navbar on small screens -->
+		<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+		 <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+		 <a href="index.html#donate" class="w3-bar-item w3-button w3-padding-large">DONATE</a>
+		 <a href="about.html" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>		  
+		 <a href="image_gallery.html" class="w3-bar-item w3-button w3-padding-large">IMAGE GALLERY</a>
+		 <a href="video_gallery.html" class="w3-bar-item w3-button w3-padding-large">VIDEO GALLERY</a>
+		 <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large">CONTACT US</a>
+		</div>
+		</nav>
+		
+<!-- Page content -->
+		<br>
+		<br>
+		<br>
+		<header>	
+			<div class="w3-container">
+				<h1 align="center"><span style="font-size:11px;"><img src="img/trudyHeart.jpg" alt="heart icon" style="width:6%; height:5%"></img></span> &nbsp; <b>TRUDY&#39;S HEART FOUNDATION</b></h1>
+			</div>
+
+<!-- Red Border -->
+			<div class="w3-card-4">
+				<div class="w3-container w3-theme w3-card-2">
+					<h1></h1>
+				</div>
+			</div>
+			
+<!-- Automatic Slideshow Images -->
+			<div class="w3-content" style="max-width:1200px;margin-top:1px">
+				<div class="mySlides w3-display-container w3-center">
+					<img src="img/handing_out_clothes_2.jpg" style="width:100%; height:75%">
+				
+					<div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+						<h2><b>Giving</b></h2>
+						<h3><b>The most fulfilling act you will accomplish in this lifetime</b></h3>
+					</div>
+				</div>
+
+				<div class="mySlides w3-display-container w3-center">
+					<img src="img/passing_out_toys3.jpg" style="width:100%">
+					
+					<div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+						<h2><b>THE JOY OF BRINGING JOY</b></h2>
+						<h3><b>Happy children receiving new toys</b></h3>
+					</div>
+				</div>
+
+				<div class="mySlides w3-display-container w3-center">
+					<img src="img/children_photo_op.jpg" style="width:100%">
+
+					<div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+						<br>
+						<h2><b>THE ORPHANS AT TAKORADI</b></h2>
+						<h3><b>A Chance photo opportunity for the local orphans</b></h3>
+					</div>
+				</div>
+		</header>
+		
+<!-- Narative Section -->
+		<div class="w3-container w3-content w3-center w3-padding-64"  style="max-width:800px" id="band">
+			<h2 class="w3-wide"><b>MISSION STATEMENT</b></h2>
+
+			<p class="w3-opacity"><b><i>Why we care</i></b></p>
+
+			<p class="w3-justify"><b>Trudy&rsquo;s Heart Foundation is a registered Nongovernmental Organization based in Takoradi, Ghana. Its mission is to provide basic human necessities and, if possible, life&rsquo;s minor luxuries to those who are less than fortunate. Our greatest focus is on providing for the needs of orphans and forgotten children in Takoradi, Ghana and the surrounding areas.</b><br>
+
+			<h2><b>HOW GENEROUS PEOPLE LIKE YOU CAN CONTRIBUTE</b></h2>
+			
+			<b>We are enabled to accomplish our mission by acquiring donations of both monetary and material items. Although the best and easiest donations are monetary in nature, the ability to physically hand out some much needed supplies to a struggling family, or a toy to a young distressed orphan provides an instant joy to the needy and a blessing to the donor. A residual positive effect occurs when a donor is able to physically see his or her donation help those in need, by way of pictures and videos.</b><br><br>
+			
+			<h2><b>WHAT TO DONATE</b></h2>
+			<b> If your&#39;e wondering the types of items you can donate, we believe the best place to start is with some everyday items that we tend to take for granted. Items such as shoes, clothes, toys, school supplies, laptops, and items of the like. </b><br>
+			<br>
+			<h2><b>HOW AND WHERE TO DONATE</b></h2>
+			<b> Items may be shipped directly to the mailing address provided on the DONATE page. Monetary donations can be made through our online payment method. Items may be shipped to the address provided in the links. Click the links below for monetary donations. If you have any questions or concerns please do not hesitate to leave us a comment or contact us by email or phone. </b><br>
+			<br>
+			</p>
+
+<!-- Red Border -->
+			<div class="w3-card-4">
+				<div class="w3-container w3-theme w3-card-2">
+					<h1></h1>
+				</div>
+			</div>
+		</div>
+		
+<!-- The Donate Section -->
+		<div class="w3-black" id="donate">
+			<div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+				<h5 class="w3-container w3-yellow w3-center w3-text-red"><b>(This site is under construction. Please check back later if you wish to make a donation and/or leave a note. Thank you for your patience.)</b></h5>
+				<h2 class="w3-wide w3-center"><b>DONATIONS</b></h2>
+				<p class="w3-opacity w3-center"><i>We appreciate your contribution!</i></p>
+
+				<div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+					<div class="w3-half w3-margin-bottom">
+						<img src="img/creditCard.jpg" class="w3-hover-opacity" alt="Monetary Donations" style="width:100%">
+
+						<div class="w3-container w3-white">
+							<p class="w3-opacity"><b><i>Monetary Donations</i></b></p>
+							<p>For your protection, we only accept payments through PayPal.</p>
+							
+							<b><button class="w3-button w3-black w3-margin-bottom" onclick="window.location.href='https://www.paypal.com/'">Donate</button> </b>
+						</div>
+					</div>
+
+					<div class="w3-half w3-margin-bottom">
+						<img src="img/Misc_icon.png" class="w3-hover-opacity" alt="Misc Donations" style="width:100%">
+
+						<div class="w3-container w3-white">
+							<p class="w3-opacity"><b><i>Item Donations</i></b></p>
+
+							<p>Please click here for information on how to send packages.</p>
+							
+							<button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('donateModal').style.display='block'">Donate</button>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="w3-wide w3-center"><b>TOTAL CONTRIBUTIONS RECIEVED</b></h3>
+
+				<ul class="w3-ul w3-border w3-white w3-text-grey">
+					<li class="w3-padding">As of: 17 July 2017 <span class="w3-tag w3-red w3-margin-left">$0.00</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+<!-- Donate Modal -->
+		<div id="donateModal" class="w3-modal">
+			<div class="w3-modal-content w3-animate-top w3-card-4">
+				<header class="w3-container w3-teal w3-center w3-padding-32">
+					<span class="w3-button w3-teal w3-xlarge w3-display-topright" onclick="document.getElementById('donateModal').style.display='none'">&times;</span>
+
+					<h2 class="w3-wide"><b>Donation</b></h2>
+				</header>
+
+				<div class="w3-container">
+					<p><label><b>Input items of donation (optional):</b></label></p>
+					<textarea class="w3-input w3-border" placeholder="Items" type="text" rows="5"></textarea>
+					<p><b>Items may be shipped to the following address:</b><br>
+					20 Burgundy Ave<br>
+					P.O. Box AX 15<br>
+					Race Course<br>
+					Takoradi, Ghana</p>
+					<p><b><label>Please enter your email address so we may send a thank you message, and also pictures and video links showing your contributions at work:</label></b></p>
+					<b> <input class="w3-input w3-border" placeholder="Enter email" type="text" />
+
+					<button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">SEND</button>
+					
+					<button class="w3-button w3-red w3-section" onclick="document.getElementById('donateModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+
+					<p class="w3-right">Need <a class="w3-text-blue" href="#contact">help?</a></p>
+				</div>
+			</div>
+		</div>
+		
+<!-- The Contact Section -->
+		<div class="w3-container w3-content w3-padding-64" id="contact" style="max-width:800px">
+			<h2 class="w3-wide w3-center"><b>CONTACT US</b></h2>
+						
+		<!-- Note Button -->
+			<div class="w3-container w3-content w3-padding-30 w3-large">
+			<div class="w3-wide w3-center">
+				<form action="/notes.php" target="_blank">
+					<button class="w3-button w3-black" type="submit">DROP US A NOTE!</button>
+				</form>
+			</div>
+			</div>
+
+			<div class="w3-row w3-padding-30">				
+				<div class="w3-col m6 w3-large w3-margin-bottom w3-section w3-middle">				
+					<dl style="list-style-type:none">
+						<dt><i class="fa fa-map-marker" style="width:30px"></i>Address:</dt>
+						<dd>20 Burgundy Ave</dd>
+						<dd>P.O. Box AX 15</dd>
+						<dd>Race Course</dd>
+						<dd>Takoradi, Ghana</dd>
+					</dl>
+				</div>	
+				
+				<div class="w3-col m6 w3-large w3-margin-bottom w3-section w3-right">
+					<dl style="list-style-type:none">
+						<dt><i class="fa fa-envelope" style="width:30px"></i>Email:</dt>
+						<dd>donate@trudyfoundation.org</dd>
+						<dd>trudysheartfoundation@gmail.com</dd>
+					</dl>
+				</div>
+			</div>
+			
+			<div class="w3-row w3-padding-30">				
+				<div class="w3-col m6 w3-large w3-margin-bottom w3-section w3-left">
+				<div class="w3-col m12 w3-large w3-margin-bottom">
+						<dl style="list-style-type:none">
+						<dt><i class="fa fa-phone" style="width:30px"></i>Phone:</dt>
+							<dd>(Ghana): 233-244-848560</dd>
+							<dd>(US): 1-301-605-4648</dd>
+						</dl>
+				</div>
+				</div>	
+			</div>			
+		</div>
+	</body>
+	
+<!-- End Page Content -->
+<!-- Footer -->
+
+	<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+		<p class="w3-medium"><b>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></b></p>
+	</footer>
+
+	<script>
+		// Automatic Slideshow - change image every 2 seconds
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+			   x[i].style.display = "none";  
+			}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1}    
+			x[myIndex-1].style.display = "block";  
+			setTimeout(carousel, 6000);    
+		}
+
+		// Used to toggle the menu on small screens when clicking on the menu button
+		function myFunction() {
+			var x = document.getElementById("navDemo");
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			} else { 
+				x.className = x.className.replace(" w3-show", "");
+			}
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		var modal = document.getElementById('donateModal');
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+			modal.style.display = "none";
+		  }
+		}
+	</script>
+			
+</html>

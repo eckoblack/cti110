@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	</head>
+		<title>Video Gallery</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-red.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="apple-touch-icon" sizes="180x180" href="http://per-concept.com/Kindness/images/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="http://per-concept.com/Kindness/images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="http://per-concept.com/Kindness/images/favicon/favicon-16x16.png">
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+		<style>
+		body {font-family: "Lato", sans-serif}
+		</style>
+		
+		<style>
+		img.heart {
+		  float: inherit;
+		}
+		
+		img.displayed {
+			display: block;
+			max-width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			}
+			
+		p.displayed {
+			display: block;
+			max-width: 100%;
+			margin-left: auto;
+			margin-right: auto; }
+		</style>
+		
+		<style>
+		div.bgColor {
+			background-color: teal;
+			box-shadow: 10px 10px 5px #888888;
+			color:white;
+			padding: 20px;
+			}
+		
+		div.bgColor2 {
+			background-color: black;
+			color:white;
+			padding: 20px;
+			}
+			
+		div.shadow {
+			box-shadow: 10px 10px 5px #888888;
+			}
+		</style>
+		
+		<style>
+		.newspaper {
+			-webkit-column-count: 2; /* Chrome, Safari, Opera */
+			-moz-column-count: 2; /* Firefox */
+			column-count: 2;
+			-webkit-column-rule: 4px outset black; /* Chrome, Safari, Opera */
+			-moz-column-rule: 4px outset black; /* Firefox */
+			column-rule: 4px outset black;
+		}
+</style>
+		
+		<style>
+		div.gallery {
+			margin: 5px;
+			border: 1px solid #ccc;
+			float: left;
+			width: 180px;
+		}
+
+		div.gallery:hover {
+			border: 1px solid #777;
+		}
+
+		div.gallery img {
+			width: 100%;
+			height: auto;
+		}
+
+		div.desc {
+			padding: 15px;
+			text-align: center;
+		}
+		</style>
+		
+		<style>
+		video {
+			width: 50%;
+			height: auto;
+			padding:2px;
+		}
+		</style>
+	</head>
+	
+	<body>
+
+<!-- Navbar -->
+		<div class="w3-top">
+			<div class="w3-bar w3-black w3-card-2">
+				<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+				<a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+				<a href="index.html#donate" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DONATE</a>
+				<a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+				<a href="image_gallery.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">IMAGE GALLERY</a>
+				<a href="video_gallery.html" class="w3-bar-item w3-grey w3-button w3-padding-large w3-hide-small">VIDEO GALLERY</a>
+				<a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT US</a>
+				
+			</div>
+		</div>
+
+<!-- Navbar on small screens -->
+		<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+		 <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+		 <a href="index.html#donate" class="w3-bar-item w3-button w3-padding-large">DONATE</a>
+		 <a href="about.html" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>		  
+		 <a href="image_gallery.html" class="w3-bar-item w3-button w3-padding-large">IMAGE GALLERY</a>
+		 <a href="video_gallery.html" class="w3-bar-item w3-button w3-padding-large">VIDEO GALLERY</a>
+		 <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large">CONTACT US</a>
+		</div>
+
+<!-- Page content -->
+		<br>
+		<br>
+		<div class="w3-container">
+			  <h1 align="center"><img class="heart" src="img/trudyHeart.jpg" style="width:6%"></img>
+			  <b>TRUDY&#39;S HEART FOUNDATION</b></h1>
+		</div>
+		
+<!-- Red Border -->
+		<div class="w3-bar w3-card w3-orange">
+			  <h2></h2>
+		</div>
+		
+
+<!-- Three-image header -->
+		
+		<div>
+			<div class="w3-center">
+				<img class="w3-image" src="img/Donating_Clothes_In_Takoradi.png" alt="easter party " width="100%"></img>
+			</div>
+		</div>
+		<div class="w3-bar w3-card w3-orange">
+			  <h2></h2>
+		</div>
+
+<!-- Gallery images -->
+
+			
+			<div class="w3-container w3-content w3-center w3-padding-20" style="max-width:800px">
+				<h2 class="w3-wide"><b>Video Gallery</b></h2>
+			</div>
+			
+		<div class="w3-container">
+			<div class="w3-panel w3-card w3-teal">
+			  <h2></h2>
+			</div>
+		</div>
+		
+		<div class="w3-center w3-container">
+		<div class="w3-container bgColor2">
+		<div class="bgColor">
+			<div class="w3-video">
+			  <div>
+				<video width="600" controls>
+				  <source src="videos/PassingOutSupplies.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
+				<p><i>Saying thank you to a wonderful donor</i></p>
+			  </div>
+			  <div class="w3-bar w3-border w3-light-grey"><p></p>
+			  </div>
+			  <div>
+				<video width="600" controls>
+				  <source src="videos/ReceivingShipments.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
+				<p><i>Receiving a shipment of donated items</i></p>
+			  </div>
+			  <div class="w3-bar w3-border w3-light-grey"><p></p>
+			  </div>
+			  <div>
+				<video width="600" controls>
+				  <source src="videos/EasterPartyForTheOrphans.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
+				<p><i>Easter party held in 2016 for the orphans</i></p>
+			  </div>
+			  <div class="w3-bar w3-border w3-light-grey"><p></p>
+			  </div>
+			  <div>
+				<video width="600" controls>
+				  <source src="videos/bathroom_project.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
+				<p><i>Bathroom project at Awiebo Orphanage</i></p>
+			  </div>
+			  <div class="w3-bar w3-border w3-light-grey"><p></p>
+			  </div>
+			</div>
+		</div>
+		</div>
+		</div>
+	
+<!-- End Page Content -->
+
+
+<!-- Footer -->
+		<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+		  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+		  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+		  <i class="fa fa-twitter w3-hover-opacity"></i>
+		  <i class="fa fa-linkedin w3-hover-opacity"></i>
+		  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+		</footer>
+
+		<script>
+		// Used to toggle the menu on small screens when clicking on the menu button
+		function myFunction() {
+			var x = document.getElementById("navDemo");
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			} else { 
+				x.className = x.className.replace(" w3-show", "");
+			}
+		}
+		</script>
+
+	</body>
+</html>
